@@ -16,7 +16,7 @@ class AdminTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('admin')->insert([
+        DB::table('admins')->insert([
             [
             'role_type'=>'hospital_admin',
             'name'=>'John Doe',
