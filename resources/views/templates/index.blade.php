@@ -76,7 +76,7 @@
                                 </div>
                             </div>
                             <div class="mb-lg-3">
-                                <a href="{{route('dashboards')}}" class="btn btn-type2 w-100 justify-content-center" type="submit">Login</a>
+                                <input class="btn btn-type2 w-100 justify-content-center" type="submit" value="Login">
                             </div>
                             <!-- <div class="mb-lg-3">
                                 <button type="submit" class="btn border-common rounded blue-text shadow-common w-100 justify-content-center">

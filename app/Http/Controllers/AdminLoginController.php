@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminLoginController extends Controller
 {
@@ -25,14 +26,14 @@ class AdminLoginController extends Controller
     // }
     public function doLogin(Request $request)
     {
-        dd($request);
-        // $credentials = $request->only('email', 'password');
+        $credentials = $request->only('email', 'password');
+
         
-        // if (Auth::guard('admin')->attempt($credentials)) {
-        //     return redirect()->route('dashboards'); // Redirect to the admin dashboard route
-        // } else {
-        //     return redirect()->route('login')->with('error', 'Invalid credentials');
-        // }
+        if (Auth::guard('admin')->attempt($credentials)) {
+            return redirect()->route('dashboards'); // Redirect to the admin dashboard route
+        } else {
+            return redirect()->route('login')->with('error', 'Invalid credentials');
+        }
     }
 
     // public function doLogin(Request $request)
